@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Omkar Mishra | Java Backend Developer &amp; IoT Specialist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "on-primary-container": "#3d1f14",
+                        "inverse-on-surface": "#2e2e2e",
+                        "secondary-fixed-dim": "#dfaa9b",
+                        "secondary": "#dfaa9b",
+                        "outline": "#8a7e78",
+                        "tertiary": "#fffeff",
+                        "primary-container": "#e0a48c",
+                        "surface-tint": "#e0a48c",
+                        "surface-container-high": "#1c1c1c",
+                        "on-tertiary": "#3c0090",
+                        "background": "#0e0e0e",
+                        "inverse-surface": "#e0e0e0",
+                        "on-background": "#e6e6e6",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#23005b",
+                        "tertiary-fixed-dim": "#d1bcff",
+                        "secondary-fixed": "#ffdbc6",
+                        "on-tertiary-container": "#7727ff",
+                        "surface-dim": "#0e0e0e",
+                        "surface-container-lowest": "#080808",
+                        "on-secondary": "#432115",
+                        "on-secondary-fixed": "#2e1208",
+                        "tertiary-fixed": "#e9ddff",
+                        "surface-container-low": "#121212",
+                        "primary-fixed": "#ffdbc6",
+                        "surface": "#0e0e0e",
+                        "primary-fixed-dim": "#e0a48c",
+                        "on-surface-variant": "#b0b0b0",
+                        "inverse-primary": "#754531",
+                        "tertiary-container": "#e9dcff",
+                        "primary": "#ffebd9",
+                        "surface-container-highest": "#242424",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#5a3120",
+                        "on-primary": "#4a281a",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e6e6e6",
+                        "secondary-container": "#9e6351",
+                        "on-primary-fixed": "#33160a",
+                        "on-secondary-container": "#ffebd9",
+                        "surface-container": "#161616",
+                        "on-secondary-fixed-variant": "#542f21",
+                        "outline-variant": "#3b3430",
+                        "surface-bright": "#2e2e2e",
+                        "on-tertiary-fixed-variant": "#5700c9",
+                        "surface-variant": "#242424"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "keyframes": {
+                        "float": {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-20px)" }
+                        }
+                    },
+                    "animation": {
+                        "float": "float 6s ease-in-out infinite"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "element-gap": "16px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "code-sm": ["JetBrains Mono"],
+                        "headline-md": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "code-sm": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background-color: #000000;
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #e0a48c;
+            box-shadow: 0 0 15px rgba(224, 164, 140, 0.1);
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 8px rgba(224, 164, 140, 0.6);
+        }
+        .node-dot::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #e0a48c;
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 8px #e0a48c;
+        }
+        .timeline-line {
+            background: linear-gradient(180deg, #e0a48c 0%, #9e6351 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #080808; }
+        ::-webkit-scrollbar-thumb { background: #1c1c1c; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #e0a48c; }
+        #mac-dock::-webkit-scrollbar { display: none; }
+        #mac-dock { -ms-overflow-style: none; scrollbar-width: none; }
+        .dock-item:hover .dock-tooltip {
+            opacity: 1;
+            transform: translate(-50%, -8px);
+        }
+        .dock-tooltip {
+            transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Particles Container -->
+<div id="tsparticles" class="fixed inset-0 pointer-events-none" style="z-index: 0;"></div>
+<!-- macOS Dock -->
+<div class="fixed left-4 md:left-6 top-1/2 -translate-y-1/2 z-50 h-full max-h-full py-4 flex flex-col justify-center pointer-events-none">
+    <nav id="mac-dock" class="pointer-events-auto flex flex-col items-center gap-3 py-4 px-3 rounded-2xl bg-surface-container-lowest/80 backdrop-blur-xl border border-outline-variant/30 shadow-[0_0_40px_rgba(0,0,0,0.5)] overflow-visible">
+        <a href="#home" class="dock-item group relative flex items-center justify-center rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0_0_15px_#e0a48c] transition-colors" style="width: 48px; height: 48px; min-width: 48px;">
+            <span class="dock-tooltip absolute top-1/2 -translate-y-1/2 left-full ml-4 px-2 py-1 bg-surface-container-highest text-on-surface rounded text-xs font-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+        <a href="#education" class="dock-item group relative flex items-center justify-center rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0_0_15px_#e0a48c] transition-colors" style="width: 48px; height: 48px; min-width: 48px;">
+            <span class="dock-tooltip absolute top-1/2 -translate-y-1/2 left-full ml-4 px-2 py-1 bg-surface-container-highest text-on-surface rounded text-xs font-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Education</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a2 2 0 0 0-.019-3.838L12.83 4.3a2 2 0 0 0-1.66 0L2.6 7.08a2 2 0 0 0 0 3.832l8.57 3.008a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+        </a>
+        <a href="#skills" class="dock-item group relative flex items-center justify-center rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0_0_15px_#e0a48c] transition-colors" style="width: 48px; height: 48px; min-width: 48px;">
+            <span class="dock-tooltip absolute top-1/2 -translate-y-1/2 left-full ml-4 px-2 py-1 bg-surface-container-highest text-on-surface rounded text-xs font-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Skills</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </a>
+        <a href="#projects" class="dock-item group relative flex items-center justify-center rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0_0_15px_#e0a48c] transition-colors" style="width: 48px; height: 48px; min-width: 48px;">
+            <span class="dock-tooltip absolute top-1/2 -translate-y-1/2 left-full ml-4 px-2 py-1 bg-surface-container-highest text-on-surface rounded text-xs font-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Projects</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        </a>
+        <a href="#experience" class="dock-item group relative flex items-center justify-center rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0_0_15px_#e0a48c] transition-colors" style="width: 48px; height: 48px; min-width: 48px;">
+            <span class="dock-tooltip absolute top-1/2 -translate-y-1/2 left-full ml-4 px-2 py-1 bg-surface-container-highest text-on-surface rounded text-xs font-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Experience</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </a>
+        <a href="#contact" class="dock-item group relative flex items-center justify-center rounded-full bg-surface-variant text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container hover:shadow-[0_0_15px_#e0a48c] transition-colors" style="width: 48px; height: 48px; min-width: 48px;">
+            <span class="dock-tooltip absolute top-1/2 -translate-y-1/2 left-full ml-4 px-2 py-1 bg-surface-container-highest text-on-surface rounded text-xs font-label-caps whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Contact</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+    </nav>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden px-gutter" id="home">
+<!-- Animated Background Placeholder -->
+<div class="absolute inset-0 z-0 opacity-40">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 glass-card rounded-full border-primary-container/20">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#e0a48c]"></span>
+<span class="font-label-caps text-label-caps text-primary-container">System Architecture: Online</span>
+</div>
+<h1 class="font-display-lg text-5xl md:text-7xl text-primary font-bold tracking-tight">Hi, I'm <span class="text-white">Omkar Mishra</span>.</h1>
+<div class="relative h-[150px] md:h-[220px] w-full font-display-lg text-[3rem] md:text-[4.5rem] font-extrabold leading-tight text-primary-container" style="filter: url(#threshold) blur(0.6px);">
+    <span id="text1" class="absolute inset-x-0 top-0 left-0 inline-block w-full"></span>
+    <span id="text2" class="absolute inset-x-0 top-0 left-0 inline-block w-full"></span>
+</div>
+<svg id="filters" style="display:none;" preserveAspectRatio="xMidYMid slice">
+    <defs>
+        <filter id="threshold">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 255 -140" />
+        </filter>
+        <filter id="remove-white">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                -1.5 -1.5 -1.5 4.3 0" />
+        </filter>
+        <filter id="soft-edges">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blurredAlpha"/>
+            <feComposite in="SourceGraphic" in2="blurredAlpha" operator="in"/>
+        </filter>
+    </defs>
+</svg>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Java Backend Developer with experience building full-stack applications using Spring Boot, React, PostgreSQL, and Firebase. Specialist in IoT integration and high-performance system design.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(224,164,140,0.3)] transition-all" href="#projects">Explore Projects</a>
+<a class="border border-primary-container text-primary-container px-8 py-4 font-label-caps text-label-caps hover:bg-primary-container/10 transition-all" href="#contact">Connect</a>
+<a class="bg-surface-container-highest border border-outline-variant/30 text-on-surface px-8 py-4 font-label-caps text-label-caps hover:bg-surface-variant transition-all flex items-center gap-2" href="assets/docs/resume.pdf" download="Omkar_Mishra_Resume.pdf"><span class="material-symbols-outlined text-[18px]">download</span> Resume</a>
+</div>
+</div>
+<div class="hidden md:flex justify-end animate-float translate-x-32 lg:translate-x-40">
+<div class="relative w-[750px] h-[750px] flex items-center justify-center scale-110">
+<!-- Ambient Glow -->
+<div class="absolute inset-10 bg-primary-container/30 blur-[60px] rounded-full animate-pulse pointer-events-none z-0"></div>
+<div class="w-full h-full relative z-10 drop-shadow-[0_0_15px_rgba(224,164,140,0.3)]">
+    <video id="avatar-video" src="assets/videos/avatarvideo.webm" autoplay loop muted playsinline class="w-full h-full object-contain" style="filter: url(#soft-edges);"></video>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="py-section-gap px-gutter bg-surface-container-lowest/80 backdrop-blur-md relative z-10" id="education">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">Education</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="relative pl-8 space-y-12 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[2px] before:bg-gradient-to-b before:from-primary-container before:to-secondary-container">
+<!-- B.Tech -->
+<div class="relative">
+<img src="assets/images/college.svg" alt="College Logo" class="absolute -left-[47px] top-0 w-8 h-8 rounded-full border-2 border-primary-container shadow-[0_0_10px_#e0a48c] bg-white object-contain p-0.5">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">B.Tech in Computer Science and Engineering (Internet of Things)</h3>
+<p class="text-on-surface-variant font-body-md">Noida Institute Of Engineering And Technology, Greater Noida, Uttar Pradesh</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary-container block">2023 - 2027</span>
+<span class="font-body-md text-secondary font-bold">CGPA: 8.84</span>
+</div>
+</div>
+</div>
+<!-- Intermediate -->
+<div class="relative">
+<img src="assets/images/school.png" alt="School Logo" class="absolute -left-[47px] top-0 w-8 h-8 rounded-full border-2 border-primary-container/40 bg-white object-contain p-0.5">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 opacity-80">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Intermediate (12th)</h3>
+<p class="text-on-surface-variant font-body-md">Delhi Public School, Maruti Kunj, Gurugram</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary-container block">2021 - 2022</span>
+<span class="font-body-md text-secondary">Percentage: 70.2%</span>
+</div>
+</div>
+</div>
+<!-- Matriculation -->
+<div class="relative">
+<img src="assets/images/school.png" alt="School Logo" class="absolute -left-[47px] top-0 w-8 h-8 rounded-full border-2 border-primary-container/40 bg-white object-contain p-0.5">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 opacity-80">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Matriculation (10th)</h3>
+<p class="text-on-surface-variant font-body-md">Delhi Public School, Maruti Kunj, Gurugram</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary-container block">2019 - 2020</span>
+<span class="font-body-md text-secondary">Percentage: 87.57%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-section-gap px-gutter bg-surface/80 backdrop-blur-md relative z-10" id="skills">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<h2 class="font-headline-lg text-headline-lg text-primary text-center">Technical Matrix</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Programming -->
+<div class="glass-card p-6 rounded-lg group hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-blue-400">terminal</span>
+<h3 class="font-headline-md text-headline-md text-blue-400">Programming</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-blue-500/20 hover:to-indigo-500/20 transition-colors"><i class="devicon-java-plain colored text-lg"></i>Core Java</span>
+<span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-blue-500/20 hover:to-indigo-500/20 transition-colors"><i class="devicon-python-plain colored text-lg"></i>Python</span>
+<span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-blue-500/20 hover:to-indigo-500/20 transition-colors"><i class="devicon-javascript-plain colored text-lg"></i>JavaScript</span>
+<span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-blue-500/20 hover:to-indigo-500/20 transition-colors"><span class="material-symbols-outlined text-blue-400 text-lg">data_object</span>Collections</span>
+</div>
+</div>
+<!-- Databases -->
+<div class="glass-card p-6 rounded-lg group hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-emerald-400">database</span>
+<h3 class="font-headline-md text-headline-md text-emerald-400">Databases</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-emerald-500/20 hover:to-teal-500/20 transition-colors"><i class="devicon-mysql-plain colored text-lg"></i>MySQL</span>
+<span class="px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-emerald-500/20 hover:to-teal-500/20 transition-colors"><i class="devicon-firebase-plain colored text-lg"></i>Firebase</span>
+<span class="px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-emerald-500/20 hover:to-teal-500/20 transition-colors"><i class="devicon-postgresql-plain colored text-lg"></i>PostgreSQL</span>
+<span class="px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-emerald-500/20 hover:to-teal-500/20 transition-colors"><i class="devicon-supabase-plain colored text-lg"></i>Supabase</span>
+</div>
+</div>
+<!-- Backend Frameworks -->
+<div class="glass-card p-6 rounded-lg group hover:shadow-[0_0_20px_rgba(249,115,22,0.2)] transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-orange-400">settings_input_component</span>
+<h3 class="font-headline-md text-headline-md text-orange-400">Backend</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-orange-500/20 hover:to-red-500/20 transition-colors"><i class="devicon-spring-original colored text-lg"></i>Spring Boot</span>
+<span class="px-4 py-2 bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-orange-500/20 hover:to-red-500/20 transition-colors"><span class="material-symbols-outlined text-orange-400 text-lg">api</span>REST APIs</span>
+<span class="px-4 py-2 bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-orange-500/20 hover:to-red-500/20 transition-colors"><i class="devicon-flask-original text-white text-lg"></i>Flask</span>
+</div>
+</div>
+<!-- Tools -->
+<div class="glass-card p-6 rounded-lg group hover:shadow-[0_0_20px_rgba(236,72,153,0.2)] transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-pink-400">build</span>
+<h3 class="font-headline-md text-headline-md text-pink-400">Tools</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-pink-500/20 hover:to-rose-500/20 transition-colors"><i class="devicon-git-plain colored text-lg"></i>Git</span>
+<span class="px-4 py-2 bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-pink-500/20 hover:to-rose-500/20 transition-colors"><i class="devicon-maven-plain colored text-lg"></i>Maven</span>
+<span class="px-4 py-2 bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-pink-500/20 hover:to-rose-500/20 transition-colors"><i class="devicon-postman-plain colored text-lg"></i>Postman</span>
+</div>
+</div>
+<!-- Core CS -->
+<div class="glass-card p-6 rounded-lg md:col-span-2 group hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-purple-400">memory</span>
+<h3 class="font-headline-md text-headline-md text-purple-400">Core Computer Science</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-fuchsia-500/10 border border-purple-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-purple-500/20 hover:to-fuchsia-500/20 transition-colors"><span class="material-symbols-outlined text-purple-400 text-lg">data_array</span>DSA</span>
+<span class="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-fuchsia-500/10 border border-purple-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-purple-500/20 hover:to-fuchsia-500/20 transition-colors"><span class="material-symbols-outlined text-purple-400 text-lg">category</span>OOP</span>
+<span class="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-fuchsia-500/10 border border-purple-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-purple-500/20 hover:to-fuchsia-500/20 transition-colors"><span class="material-symbols-outlined text-purple-400 text-lg">database</span>DBMS</span>
+<span class="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-fuchsia-500/10 border border-purple-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-purple-500/20 hover:to-fuchsia-500/20 transition-colors"><span class="material-symbols-outlined text-purple-400 text-lg">terminal</span>Operating Systems</span>
+<span class="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-fuchsia-500/10 border border-purple-500/30 rounded-full text-sm font-medium text-white flex items-center gap-2 hover:from-purple-500/20 hover:to-fuchsia-500/20 transition-colors"><span class="material-symbols-outlined text-purple-400 text-lg">router</span>Computer Networks</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-section-gap px-gutter bg-surface-container-low/80 backdrop-blur-md relative z-10" id="projects">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-primary-container">Selected Works</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Featured Deployments</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-sm">A collection of full-stack engineering solutions focusing on real-time data and predictive modeling.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1: Progex -->
+<div onclick="openProjectModal('progex')" class="glass-card relative overflow-hidden group min-h-[450px] flex flex-col justify-end rounded-2xl cursor-pointer shadow-2xl hover:shadow-[0_0_30px_rgba(224,164,140,0.2)] transition-shadow duration-500">
+    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" data-alt="Progex UI" src="https://api.microlink.io?url=https://progex1.onrender.com/&screenshot=true&meta=false&embed=screenshot.url"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
+    <div class="relative z-10 w-full p-8 flex flex-col h-full justify-end">
+        <div class="transform transition-transform duration-500 ease-out group-hover:-translate-y-2">
+            <p class="font-label-caps text-[10px] text-primary mb-2 tracking-widest uppercase">March 2025 - June 2025</p>
+            <h3 class="font-headline-md text-2xl text-white font-bold leading-tight drop-shadow-md mb-4">Progex – LeetCode Tracker</h3>
+            <div class="flex gap-3 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                <a href="https://github.com/OmkarMishra07/progex1" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">code</a>
+                <a href="https://progex1.onrender.com/" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">open_in_new</a>
+            </div>
+        </div>
+        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+            <div class="overflow-hidden">
+                <div class="pt-6 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                    <p class="text-sm text-gray-300 leading-relaxed font-body-md">
+                        A full-stack application designed to track your LeetCode progress and coding activity, featuring real-time data storage and social leaderboards.
+                    </p>
+                    <p class="text-primary text-xs font-label-caps mt-4 flex items-center gap-1 group/btn"><span class="group-hover/btn:underline">Click to view full details</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 2: DevConnect -->
+<div onclick="openProjectModal('devconnect')" class="glass-card relative overflow-hidden group min-h-[450px] flex flex-col justify-end rounded-2xl cursor-pointer shadow-2xl hover:shadow-[0_0_30px_rgba(224,164,140,0.2)] transition-shadow duration-500">
+    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" data-alt="DevConnect UI" src="https://api.microlink.io?url=https://project-pva0r.vercel.app/login&screenshot=true&meta=false&embed=screenshot.url"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
+    <div class="relative z-10 w-full p-8 flex flex-col h-full justify-end">
+        <div class="transform transition-transform duration-500 ease-out group-hover:-translate-y-2">
+            <p class="font-label-caps text-[10px] text-primary mb-2 tracking-widest uppercase">Feb 2026 - April 2026</p>
+            <h3 class="font-headline-md text-2xl text-white font-bold leading-tight drop-shadow-md mb-4">DevConnect – Collaboration Hub</h3>
+            <div class="flex gap-3 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                <a href="https://github.com/OmkarMishra07/DevConnect" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">code</a>
+                <a href="https://project-pva0r.vercel.app/login" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">open_in_new</a>
+            </div>
+        </div>
+        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+            <div class="overflow-hidden">
+                <div class="pt-6 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                    <p class="text-sm text-gray-300 leading-relaxed font-body-md">
+                        A comprehensive developer collaboration platform enabling user networking, challenge creation, and coding activity tracking.
+                    </p>
+                    <p class="text-primary text-xs font-label-caps mt-4 flex items-center gap-1 group/btn"><span class="group-hover/btn:underline">Click to view full details</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 3: Cab Fare -->
+<div onclick="openProjectModal('cabfare')" class="glass-card relative overflow-hidden group min-h-[450px] flex flex-col justify-end rounded-2xl cursor-pointer shadow-2xl hover:shadow-[0_0_30px_rgba(224,164,140,0.2)] transition-shadow duration-500">
+    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" data-alt="Cab Fare Data" src="https://api.microlink.io?url=https://cab-price-predictor-app.onrender.com/&screenshot=true&meta=false&embed=screenshot.url"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
+    <div class="relative z-10 w-full p-8 flex flex-col h-full justify-end">
+        <div class="transform transition-transform duration-500 ease-out group-hover:-translate-y-2">
+            <p class="font-label-caps text-[10px] text-primary mb-2 tracking-widest uppercase">March 2026 - April 2026</p>
+            <h3 class="font-headline-md text-2xl text-white font-bold leading-tight drop-shadow-md mb-4">Cab Fare &amp; Surge Prediction</h3>
+            <div class="flex gap-3 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                <a href="https://github.com/OmkarMishra07/Cab-price-predictor" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">code</a>
+                <a href="https://cab-price-predictor-app.onrender.com/" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">open_in_new</a>
+            </div>
+        </div>
+        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+            <div class="overflow-hidden">
+                <div class="pt-6 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                    <p class="text-sm text-gray-300 leading-relaxed font-body-md">
+                        An end-to-end machine learning system that accurately predicts cab fares and surge pricing across multiple ride categories using real-world datasets.
+                    </p>
+                    <p class="text-primary text-xs font-label-caps mt-4 flex items-center gap-1 group/btn"><span class="group-hover/btn:underline">Click to view full details</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 4: Verse -->
+<div onclick="openProjectModal('verse')" class="glass-card relative overflow-hidden group min-h-[450px] flex flex-col justify-end rounded-2xl cursor-pointer shadow-2xl hover:shadow-[0_0_30px_rgba(224,164,140,0.2)] transition-shadow duration-500">
+    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" data-alt="Verse App" src="https://api.microlink.io?url=https://verse.geetprince.me/&screenshot=true&meta=false&embed=screenshot.url"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
+    <div class="relative z-10 w-full p-8 flex flex-col h-full justify-end">
+        <div class="transform transition-transform duration-500 ease-out group-hover:-translate-y-2">
+            <p class="font-label-caps text-[10px] text-primary mb-2 tracking-widest uppercase">Android Application</p>
+            <h3 class="font-headline-md text-2xl text-white font-bold leading-tight drop-shadow-md mb-4">Verse – Music Player & Jamming</h3>
+            <div class="flex gap-3 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                <a href="https://github.com/OmkarMishra07/Verse" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">code</a>
+                <a href="https://verse.geetprince.me/" onclick="event.stopPropagation()" target="_blank" class="bg-surface/50 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-background transition-colors material-symbols-outlined text-sm">open_in_new</a>
+            </div>
+        </div>
+        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+            <div class="overflow-hidden">
+                <div class="pt-6 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                    <p class="text-sm text-gray-300 leading-relaxed font-body-md">
+                        A modern Android music player featuring real-time synchronized jamming sessions and a classic iPod-style click wheel interface.
+                    </p>
+                    <p class="text-primary text-xs font-label-caps mt-4 flex items-center gap-1 group/btn"><span class="group-hover/btn:underline">Click to view full details</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-section-gap px-gutter bg-surface/80 backdrop-blur-md relative z-10" id="experience">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary whitespace-nowrap">Technical Experience</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid md:grid-cols-12 gap-8">
+<div class="md:col-span-4">
+<div class="glass-card p-8 rounded-lg sticky top-32">
+<div class="mb-4">
+<span class="font-label-caps text-label-caps text-primary-container block mb-2">June 2025</span>
+<h3 class="font-headline-md text-headline-md text-primary">Deloitte Australia</h3>
+<p class="text-on-surface-variant font-body-md">Data Analytics Job Simulation</p>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-sm">verified</span> Verified Achievement
+                            </div>
+</div>
+</div>
+<div class="md:col-span-8 space-y-6">
+<div class="glass-card p-8 rounded-lg space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary-container">Key Contributions</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">analytics</span>
+<span>Completed a Deloitte Australia job simulation focused on real-world data analytics tasks.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">query_stats</span>
+<span>Cleaned, analyzed, and interpreted datasets to support business decision-making.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">dashboard</span>
+<span>Built interactive dashboards and visualizations using Tableau to present insights.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">strategy</span>
+<span>Delivered data-driven recommendations following consulting and industry best practices.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-gutter bg-surface-container-lowest/80 backdrop-blur-md relative z-10" id="contact">
+<div class="max-w-container-max mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<div class="space-y-8">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Let's Build Something <span class="text-primary-container">Future-Proof</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">I am currently open to freelance opportunities and full-time backend engineering roles. Reach out to discuss your technical architecture.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 glass-card rounded-lg flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-body-md text-on-surface">omkar794mishra@gmail.com</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 glass-card rounded-lg flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="font-body-md text-on-surface">+91 9654871777</span>
+</div>
+</div>
+<div class="flex gap-6 mt-4">
+<a class="text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-2 font-label-caps" href="https://github.com/OmkarMishra07" target="_blank"><i class="devicon-github-original text-2xl"></i> GitHub</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-2 font-label-caps" href="https://www.linkedin.com/in/omkar-mishra-aa5084296/" target="_blank"><i class="devicon-linkedin-plain text-2xl"></i> LinkedIn</a>
+</div>
+</div>
+<div class="glass-card p-8 md:p-12 rounded-2xl relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl"></div>
+<form action="mailto:omkar794mishra@gmail.com" method="post" enctype="text/plain" class="space-y-6 relative z-10">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Full Name</label>
+<input name="Name" required class="w-full bg-background/50 border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary-container text-primary transition-all p-3" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Email Address</label>
+<input name="Email" required class="w-full bg-background/50 border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary-container text-primary transition-all p-3" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Your Message</label>
+<textarea name="Message" required class="w-full bg-background/50 border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary-container text-primary transition-all p-3 resize-none" placeholder="I have a project idea..." rows="4"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary-container text-on-primary-container font-label-caps text-label-caps py-4 rounded hover:bg-primary-fixed-dim transition-all flex items-center justify-center gap-2">
+                                Initialize Connection
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest/80 backdrop-blur-md border-t border-outline-variant/20 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-element-gap">
+<div class="font-headline-md text-headline-md text-primary">Omkar Mishra</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2026 Omkar Mishra</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="https://github.com/OmkarMishra07" target="_blank">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="https://www.linkedin.com/in/omkar-mishra-aa5084296/" target="_blank">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 font-body-md text-body-md" href="mailto:omkar794mishra@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Initialize tsParticles
+        tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            background: {
+                color: "transparent"
+            },
+            interactivity: {
+                detectsOn: "window",
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 180,
+                        links: {
+                            opacity: 0.5,
+                            color: "#e0a48c"
+                        }
+                    }
+                }
+            },
+            particles: {
+                color: {
+                    value: "#e0a48c"
+                },
+                links: {
+                    color: "#e0a48c",
+                    distance: 120,
+                    enable: true,
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    direction: "none",
+                    enable: true,
+                    outModes: {
+                        default: "bounce"
+                    },
+                    random: true,
+                    speed: 0.8,
+                    straight: false
+                },
+                number: {
+                    density: {
+                        enable: true,
+                        area: 800
+                    },
+                    value: 80
+                },
+                opacity: {
+                    value: 0.5
+                },
+                shape: {
+                    type: "circle"
+                },
+                size: {
+                    value: { min: 1, max: 2 }
+                }
+            },
+            detectRetina: true
+        });
+
+        // Morphing Text Animation Logic
+        const morphTexts = [
+            "Engineering Scalable IoT",
+            "Backend Architectures",
+            "Cloud Solutions",
+            "Data Pipelines"
+        ];
+        
+        const text1 = document.getElementById("text1");
+        const text2 = document.getElementById("text2");
+        
+        let textIndex = 0;
+        let morph = 0;
+        let cooldown = 0;
+        let time = new Date();
+        const morphTime = 1.5;
+        const cooldownTime = 0.5;
+        
+        if (text1 && text2) {
+            text1.textContent = morphTexts[textIndex % morphTexts.length];
+            text2.textContent = morphTexts[(textIndex + 1) % morphTexts.length];
+            
+            function doMorph() {
+                morph -= cooldown;
+                cooldown = 0;
+                
+                let fraction = morph / morphTime;
+                
+                if (fraction > 1) {
+                    cooldown = cooldownTime;
+                    fraction = 1;
+                }
+                
+                setStyles(fraction);
+                
+                if (fraction === 1) {
+                    textIndex++;
+                }
+            }
+            
+            function setStyles(fraction) {
+                text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+                
+                const invertedFraction = 1 - fraction;
+                text1.style.filter = `blur(${Math.min(8 / invertedFraction - 8, 100)}px)`;
+                text1.style.opacity = `${Math.pow(invertedFraction, 0.4) * 100}%`;
+                
+                text1.textContent = morphTexts[textIndex % morphTexts.length];
+                text2.textContent = morphTexts[(textIndex + 1) % morphTexts.length];
+            }
+            
+            function doCooldown() {
+                morph = 0;
+                text2.style.filter = "none";
+                text2.style.opacity = "100%";
+                text1.style.filter = "none";
+                text1.style.opacity = "0%";
+            }
+            
+            function animateMorph() {
+                requestAnimationFrame(animateMorph);
+                
+                const newTime = new Date();
+                const dt = (newTime.getTime() - time.getTime()) / 1000;
+                time = newTime;
+                
+                cooldown -= dt;
+                
+                if (cooldown <= 0) {
+                    doMorph();
+                } else {
+                    doCooldown();
+                }
+            }
+            
+            animateMorph();
+        }
+
+
+        // macOS Dock Animation Logic
+        const dock = document.getElementById('mac-dock');
+        const dockItems = document.querySelectorAll('.dock-item');
+        const maxScale = 1.6; 
+        const distanceLimit = 150; 
+        const baseSize = 48;
+
+        if (dock) {
+            dock.addEventListener('mousemove', (e) => {
+                dockItems.forEach(item => {
+                    item.style.transition = 'background-color 0.2s, color 0.2s, box-shadow 0.2s'; 
+                    const rect = item.getBoundingClientRect();
+                    const itemCenterY = rect.top + rect.height / 2;
+                    const distance = Math.abs(e.clientY - itemCenterY);
+                    
+                    let scale = 1;
+                    if (distance < distanceLimit) {
+                        const scaleAmount = 1 - (distance / distanceLimit);
+                        scale = 1 + (maxScale - 1) * scaleAmount;
+                    }
+                    
+                    const newSize = baseSize * scale;
+                    item.style.width = `${newSize}px`;
+                    item.style.height = `${newSize}px`;
+                });
+            });
+
+            dock.addEventListener('mouseleave', () => {
+                dockItems.forEach(item => {
+                    item.style.transition = 'width 0.25s cubic-bezier(0.2, 0, 0, 1), height 0.25s cubic-bezier(0.2, 0, 0, 1), background-color 0.2s, color 0.2s, box-shadow 0.2s';
+                    item.style.width = `${baseSize}px`;
+                    item.style.height = `${baseSize}px`;
+                });
+            });
+        }
+    </script>
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300 px-4">
+        <div class="glass-card w-full max-w-4xl mx-auto max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300 border border-outline-variant/30" id="project-modal-content">
+            <!-- Content gets injected here -->
+        </div>
+    </div>
+
+    <script>
+        const projectsData = {
+            progex: {
+                title: "Progex – LeetCode Tracker",
+                date: "March 2025 - June 2025",
+                img: "https://api.microlink.io?url=https://progex1.onrender.com/&screenshot=true&meta=false&embed=screenshot.url",
+                desc: "Developed a full-stack application using React and Flask to track LeetCode progress, coding activity, and performance insights.",
+                features: [
+                    "Integrated Firebase (Firestore + Authentication) for real-time data storage and secure user management.",
+                    "Designed a responsive and interactive UI featuring dashboards for progress tracking.",
+                    "Built and consumed RESTful APIs for managing user activity, challenge workflows, and leaderboard rankings."
+                ],
+                tech: ["Flask", "React", "Firebase"],
+                github: "https://github.com/OmkarMishra07/progex1",
+                demo: "https://progex1.onrender.com/"
+            },
+            devconnect: {
+                title: "DevConnect – Collaboration Hub",
+                date: "Feb 2026 - April 2026",
+                img: "https://api.microlink.io?url=https://project-pva0r.vercel.app/login&screenshot=true&meta=false&embed=screenshot.url",
+                desc: "Developed a full-stack developer collaboration platform enabling user networking, coding activity tracking and challenge participation.",
+                features: [
+                    "Implemented JWT-based authentication and authorization using Spring Security.",
+                    "Built RESTful APIs for profile management, challenge creation and activity tracking.",
+                    "Integrated Supabase PostgreSQL for scalable storage of user profiles."
+                ],
+                tech: ["Spring Boot", "React", "PostgreSQL"],
+                github: "https://github.com/OmkarMishra07/DevConnect",
+                demo: "https://project-pva0r.vercel.app/login"
+            },
+            cabfare: {
+                title: "Cab Fare & Surge Prediction",
+                date: "March 2026 - April 2026",
+                img: "https://api.microlink.io?url=https://cab-price-predictor-app.onrender.com/&screenshot=true&meta=false&embed=screenshot.url",
+                desc: "Developed an end-to-end machine learning system to predict cab fares and surge pricing using the India Rideshare dataset.",
+                features: [
+                    "Trained Gradient Boosting Regressor, Ridge Regression, and Random Forest models.",
+                    "Built a robust data preprocessing pipeline using ColumnTransformer and One-Hot Encoding.",
+                    "Deployed trained models through a Python-based REST API and interactive web dashboard."
+                ],
+                tech: ["Python", "Scikit-Learn", "React"],
+                github: "https://github.com/OmkarMishra07/Cab-price-predictor",
+                demo: "https://cab-price-predictor-app.onrender.com/"
+            },
+            verse: {
+                title: "Verse – Music Player & Jamming",
+                date: "Android Application",
+                img: "https://api.microlink.io?url=https://verse.geetprince.me/&screenshot=true&meta=false&embed=screenshot.url",
+                desc: "Verse is a modern Android music player and real-time jamming application featuring a classic iPod-style click wheel navigation interface.",
+                features: [
+                    "Built a modern Android music player with glassmorphism UI.",
+                    "Engineered a classic iPod-style click wheel navigation.",
+                    "Implemented real-time 'Jam Sessions' to sync music playback across devices."
+                ],
+                tech: ["Android", "Kotlin", "Real-time"],
+                github: "https://github.com/OmkarMishra07/Verse",
+                demo: "https://verse.geetprince.me/"
+            }
+        };
+
+        function openProjectModal(projectId) {
+            const data = projectsData[projectId];
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('project-modal-content');
+            
+            let featuresHtml = data.features.map(f => `<li class="flex gap-3"><span class="material-symbols-outlined text-primary-container shrink-0 mt-0.5">check_circle</span> <span class="text-on-surface-variant leading-relaxed">${f}</span></li>`).join('');
+            let techHtml = data.tech.map(t => `<span class="px-4 py-1.5 bg-surface-container-highest text-on-surface rounded-full text-xs font-label-caps border border-outline-variant/20 shadow-sm">${t}</span>`).join('');
+            
+            let demoBtn = data.demo ? `<a href="${data.demo}" target="_blank" class="flex-1 bg-primary-container text-on-primary-container px-6 py-4 rounded-xl font-label-caps text-center hover:bg-primary transition-colors flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(224,164,140,0.3)]"><span class="material-symbols-outlined text-sm">open_in_new</span> Live Demo</a>` : '';
+            let githubBtn = data.github ? `<a href="${data.github}" target="_blank" class="flex-1 border border-primary-container text-primary-container px-6 py-4 rounded-xl font-label-caps text-center hover:bg-primary-container/10 transition-colors flex items-center justify-center gap-2"><span class="material-symbols-outlined text-sm">code</span> View Code</a>` : '';
+
+            content.innerHTML = `
+                <div class="relative h-64 md:h-96 w-full rounded-t-2xl overflow-hidden bg-black">
+                    <img src="${data.img}" class="w-full h-full object-cover opacity-50" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
+                    <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-10 h-10 bg-black/50 hover:bg-primary-container hover:text-on-primary-container text-white rounded-full flex items-center justify-center backdrop-blur-md transition-colors border border-white/10 z-10"><span class="material-symbols-outlined">close</span></button>
+                    <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 right-6 z-10">
+                        <p class="font-label-caps text-primary mb-2 tracking-widest text-xs uppercase">${data.date}</p>
+                        <h2 class="font-headline-lg text-3xl md:text-5xl text-on-surface font-bold tracking-tight drop-shadow-lg">${data.title}</h2>
+                    </div>
+                </div>
+                <div class="p-6 md:p-10 space-y-8 bg-surface rounded-b-2xl">
+                    <p class="font-body-lg text-lg text-on-surface leading-relaxed">${data.desc}</p>
+                    
+                    <div class="space-y-4">
+                        <h4 class="font-headline-md text-xl text-primary border-b border-outline-variant/30 pb-2">Key Features</h4>
+                        <ul class="space-y-4 text-sm font-body-md">${featuresHtml}</ul>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <h4 class="font-headline-md text-xl text-primary border-b border-outline-variant/30 pb-2">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">${techHtml}</div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-outline-variant/30">
+                        ${demoBtn}
+                        ${githubBtn}
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // disable body scroll
+            document.body.style.overflow = 'hidden';
+
+            // small delay for transition
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                content.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('project-modal-content');
+            modal.classList.add('opacity-0');
+            content.classList.add('scale-95');
+            
+            // re-enable body scroll
+            document.body.style.overflow = '';
+
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close on backdrop click
+        document.addEventListener('click', (e) => {
+            const modal = document.getElementById('project-modal');
+            if(e.target === modal) {
+                closeProjectModal();
+            }
+        });
+    </script>
+</body></html>
